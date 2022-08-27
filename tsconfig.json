@@ -28,7 +28,7 @@
       "@configs/*": ["configs/*"],
       "@services/*": ["services/*"],
       "@library/*": ["library/*"],
-      "@library": ["library/index.ts"]
+      "@library": ["library/index.ts"],
     },
   },
   "include": ["src"],

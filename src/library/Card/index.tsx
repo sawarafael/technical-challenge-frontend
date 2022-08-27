@@ -7,10 +7,16 @@ import {
   TitleContainer,
   TitleContent,
   ButtonContent,
+  DescriptionContainer,
+  FooterCard,
 } from "./styles";
 
 interface ICard {
   url: string;
+  productName: string;
+  productBrand: string;
+  productPrice: number;
+  productDescription: string;
 }
 
 const Card = (props: ICard) => {
@@ -19,10 +25,12 @@ const Card = (props: ICard) => {
       <Image image={props.url} />
       <Content>
         <TitleContainer>
-          <TitleContent>asdad</TitleContent>
-          <ButtonContent>teste</ButtonContent>
+          <TitleContent>{props.productName}</TitleContent>
+          <ButtonContent>R${props.productPrice}</ButtonContent>
         </TitleContainer>
+        <DescriptionContainer>{props.productDescription}</DescriptionContainer>
       </Content>
+      <FooterCard onClick={() => console.log("teste")}>Comprar</FooterCard>
     </Container>
   );
 };
