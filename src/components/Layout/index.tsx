@@ -5,6 +5,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { AppBar, Typography } from "@library";
 
 import {
+  LayoutContainer,
   TextContainer,
   Title,
   Subtitle,
@@ -20,7 +21,7 @@ export interface ILayout {
 
 const Layout = (props: ILayout) => {
   return (
-    <>
+    <LayoutContainer>
       <AppBar>
         <TextContainer>
           <Title>
@@ -74,10 +75,10 @@ const Layout = (props: ILayout) => {
           lineHeight={2.5}
           color={"#000000"}
         >
-          MKS sistemas © Todos os direitos reservados
+          <strong>MKS sistemas © Todos os direitos reservados</strong>
         </Typography>
       </FooterContainer>
-    </>
+    </LayoutContainer>
   );
 };
 

@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const LayoutContainer = styled("div")`
+  display: flex;
+  flex-direction: column;
+`;
+
 export const TextContainer = styled("div")`
   display: flex;
   flex-direction: row;
@@ -39,7 +44,18 @@ export const ButtonContainer = styled("div")`
   border-radius: 8px;
 `;
 
-export const MainContainer = styled("div")``;
+export const MainContainer = styled("div")`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+
+  position: fixed;
+  top: 48px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+`;
 
 export const FooterContainer = styled("div")`
   width: 100%;
