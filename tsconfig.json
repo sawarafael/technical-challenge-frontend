@@ -1,26 +1,36 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": false,
+    "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "typeRoots": ["node_modules/@types/", "./src/@types/"],
+    "baseUrl": "./src",
+    "paths": {
+      "@components": ["components/index.ts"],
+      "@components/*": ["components/*"],
+      "@pages/*": ["pages/*"],
+      "@pages": ["pages/index.ts"],
+      "@styles/*": ["styles/*"],
+      "@types": ["@types/index.d.ts"],
+      "@configs": ["configs/index.ts"],
+      "@configs/*": ["configs/*"],
+      "@services/*": ["services/*"],
+      "@library/*": ["library/*"],
+      "@library": ["library/index.ts"]
+    },
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }
